@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="Currently Active Budget" showCreate="false" link="" />
+<x-header title="Anggaran Aktif Sekarang" showCreate="false" link="" />
 @include('layouts.session')
 <div class="row">
     <div class="col-md-6">
@@ -11,26 +11,26 @@
         <h4><strong id="budget-title">{{ $budget->title }}</strong></h4>
         <hr />
         <div>
-            <strong>Alloted Amount:</strong> <span class="format-amount"
+            <strong>Alokasi Dana:</strong> <span class="format-amount"
                 data-amount="{{ $budget->alloted_amount }}"></span>
         </div>
         <div>
-            <strong>Spendings:</strong> <span id="spendings" class="format-amount"
+            <strong>Pengeluaran:</strong> <span id="spendings" class="format-amount"
                 data-amount="{{ $budget->alloted_amount - $budget->balance_amount }}"></span>
         </div>
         <div>
-            <strong>Savings:</strong> <span id="savings" class="format-amount"
+            <strong>Tabungan:</strong> <span id="savings" class="format-amount"
                 data-amount="{{ $budget->balance_amount }}"></span>
         </div>
         <div>
             <strong>Status:</strong>
-            <span class="badge badge-primary border-0">Active</span>
+            <span class="badge badge-primary border-0">Aktif</span>
         </div>
         <div>
-            <strong>Out of commision at:</strong> {{ $budget->expiry_date->format('Y F d, l') }}
+            <strong>Tanggal Pengeluaran:</strong> {{ $budget->expiry_date->format('Y F d, l') }}
         </div>
         <div>
-            <strong>Created At:</strong> {{ $budget->created_at->format('Y F d, l') }}
+            <strong>Tanggal Dibuat:</strong> {{ $budget->created_at->format('Y F d, l') }}
         </div>
         <span hidden
             id="total-days">{{ \Carbon\Carbon::parse($budget->created_at)->diffInDays($budget->expiry_date) + 2 }}
@@ -50,11 +50,11 @@
                         </div>
                         <div><i class="fa fa-list text-size text-1"></i></div>
                         @if ($totalTransactions === 1)
-                        Transaction
+                        Transaksi
                         @elseif ($totalTransactions === 0)
-                        No transaction
+                        Tidak Ada Transaksi
                         @else
-                        Total Transactions
+                        Total Transaksi
                         @endif
                     </div>
                 </div>
@@ -69,11 +69,11 @@
                         </div>
                         <div><i class="fa fa-cart-arrow-down text-size text-success"></i></div>
                         @if ($totalTransactions === 1)
-                        Profitable Transaction
+                        Transaksi Tidak Menguntungkan
                         @elseif ($totalTransactions === 0)
-                        No transaction
+                        Tidak Ada Transaksi
                         @else
-                        Profitable Transactions
+                        Transaksi Menguntungkan
                         @endif
                     </div>
                 </div>
@@ -88,11 +88,11 @@
                         </div>
                         <div><i class="fa fa-cart-plus text-size text-danger"></i></div>
                         @if ($totalTransactions === 1)
-                        Unprofitable Transaction
+                        Transaksi Tidak Menguntungkan
                         @elseif ($totalTransactions === 0)
-                        No transaction
+                        Tidak Ada Transaksi
                         @else
-                        Unprofitable Transactions
+                        Transaksi Tidak Menguntungkan
                         @endif
                     </div>
                 </div>

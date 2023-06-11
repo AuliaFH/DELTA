@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="All Balances Information" showCreate="false" link="" />
+<x-header title="Semua Informasi Saldo" showCreate="false" link="" />
 @include('layouts.session')
 <div class="container-lg">
     <div class="row">
@@ -12,10 +12,10 @@
             <table class="table table-index table-striped table-hover mt-sm-4 mt-xl-0">
                 <thead>
                     <tr>
-                        <th>S.N.</th>
-                        <th>Payment Mode</th>
-                        <th>Balance Amount</th>
-                        <th>option</th>
+                        <th>No</th>
+                        <th>Metode Pembayaran</th>
+                        <th>Jumlah Saldo</th>
+                        <th>Pilihan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="4" class="text-center">No record found</td>
+                        <td colspan="4" class="text-center">Tidak Ada Transaksi</td>
                     </tr>
                     @endforelse
                 </tbody>

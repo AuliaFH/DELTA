@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="Add Balance" showCreate="false" link="" />
+<x-header title="Tambah Saldo" showCreate="false" link="" />
 @include('layouts.session')
 <div class="card border-0 ml-2 mt-2">
     <div class="card-body">
@@ -10,17 +10,17 @@
             @csrf
             @method('put')
             <div>
-                <strong>Payment Mode: </strong>{{ $balance->title }}
+                <strong>Metode Pembayaran: </strong>{{ $balance->title }}
             </div>
-            <div><strong>Current Balance: </strong>
+            <div><strong>Saldo Saat Ini: </strong>
                 <span class="format-amount" data-amount="{{ $balance->balance }}"></span>
             </div>
 
             <div class="mt-2">
-                <label for="condition">Condition</label>
+                <label for="condition">Kondisi</label>
                 <select name="condition" id="condition"
                     class="form-control @error('condition') is-invalid @enderror rounded-0">
-                    <option selected disabled>Select One</option>
+                    <option selected disabled>Pilih Satu</option>
                     <option value="{{ \Crypt::encrypt('incre'); }}">Deposit</option>
                     <option value="{{ \Crypt::encrypt('decre'); }}">Withdraw</option>
                 </select>
@@ -31,7 +31,7 @@
                 @enderror
             </div>
             <div class="mt-2">
-                <label for="balance">Amount</label>
+                <label for="balance">Jumlah</label>
                 <input type="text" class="form-control form-text rounded-0 @error('balance') is-invalid @enderror"
                     name="balance" id="balance" value="{{ old('balance') }}" data-mask="#,##0.00"
                     data-mask-reverse="true" />

@@ -5,12 +5,12 @@
 @endsection
 
 @section('content')
-<x-header title="Create a new Budget" showCreate="false" link="" />
+<x-header title="Buat Anggaran Baru" showCreate="false" link="" />
 <div class="card bg-white border-0 mt-2">
     <div class="card-body">
         <form action="{{ url('api/budgets/store') }}" class="form" method="POST">
             @csrf
-            <label for="title">Title</label>
+            <label for="title">Judul</label>
             <input type="text" name="title" class="form-control rounded-0 @error('title') is-invalid @enderror"
                 value="{{ old('title') }}" />
             @error('title')
@@ -19,7 +19,7 @@
             </span>
             @enderror
             <div class="mt-2">
-                <label for="desc">Description</label>
+                <label for="desc">Deskripsi</label>
                 <input type="text" name="desc" class="form-control rounded-0 @error('desc') is-invalid @enderror"
                     value="{{ old('desc') }}" />
                 @error('desc')
@@ -29,7 +29,7 @@
                 @enderror
             </div>
             <div class="mt-2">
-                <label for="alloted_amount">Allot Amount</label>
+                <label for="alloted_amount">Alokasi Dana</label>
                 <input type="text" name="alloted_amount"
                     class="form-control rounded-0 @error('alloted_amount') is-invalid @enderror"
                     value="{{ old('alloted_amount') }}" data-mask="#,##0.00" data-mask-reverse="true" />
@@ -40,7 +40,7 @@
                 @enderror
             </div>
             <div class="mt-2">
-                <label for="expiry_date">Budeget Expires After</label>
+                <label for="expiry_date">Batas Berlaku Anggaran</label>
                 <input type="text" name="expiry_date"
                     class="form-control rounded-0 @error('expiry_date') is-invalid @enderror"
                     value="{{ old('expiry_date') }}" id="expiry_date" />
@@ -50,7 +50,7 @@
                 </span>
                 @enderror
             </div>
-            <input type="submit" class="btn btn-edit mt-2" value="Create" />
+            <input type="submit" class="btn btn-edit mt-2" value="Buat" />
         </form>
     </div>
 </div>

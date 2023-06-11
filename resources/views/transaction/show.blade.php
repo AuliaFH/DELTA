@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="View Transaction" showCreate="true" link="api/transactions/create" />
+<x-header title="Lihat Transaksi" showCreate="true" link="api/transactions/create" />
 <div class="card border-0 mt-2">
     <div class="card-body">
         <div class="col-12">
@@ -29,10 +29,10 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>S.N.</th>
-                            <th>Type</th>
-                            <th>Paid Via</td>
-                            <th>Amount</th>
+                            <th>No.</th>
+                            <th>Tipe</th>
+                            <th>Metode Pembayaran</td>
+                            <th>Jumlah</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="col-12 text-right">
-            <div><strong>Total Amount: </strong>
+            <div><strong>Total: </strong>
                 <span class="format-amount" data-amount="{{ $transaction->amount }}"></span>
             </div>
         </div>
@@ -57,7 +57,7 @@
             <div class="col-2 text-center">
                 {{ auth()->user()->name }}
                 <hr />
-                <h4>Thank You</h4>
+                <h4>Terima Kasih</h4>
             </div>
         </div>
 

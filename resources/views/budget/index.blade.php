@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="All Budgets" showCreate="true" link="api/budgets/create" />
+<x-header title="Semua Anggaran" showCreate="true" link="api/budgets/create" />
 @include('layouts.session')
 <table class="table table-index table-striped table-hover bg-white m-2">
     <thead>
         <tr>
-            <th>S.N.</th>
-            <th>Title</th>
-            <th>Alloted Amount</th>
-            <th>Spending</th>
-            <th>Savings</th>
-            <th>Out of Comission at</th>
+            <th>No</th>
+            <th>Judul</th>
+            <th>Jumlah Yang Dialokasikan</th>
+            <th>Pengeluaran</th>
+            <th>Tabungan</th>
+            <th>Tanggal Pengeluaran</th>
             <th>Status</th>
-            <th>Created At</th>
+            <th>Tanggal Dibuat</th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +35,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="8" class="text-center">No record found</td>
+            <td colspan="8" class="text-center">Tidak Ada Transaksi</td>
         </tr>
         @endforelse
     </tbody>

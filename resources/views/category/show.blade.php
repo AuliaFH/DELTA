@@ -1,33 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="Show Category" showCreate='true' link="api/categories/create" />
+<x-header title="Lihat Kategori" showCreate='true' link="api/categories/create" />
 <div class="card border-0 mt-2">
     <div class="card-body ml-4">
         <div>
-            <strong>Title:</strong> {{ $category->title }}
+            <strong>Judul:</strong> {{ $category->title }}
         </div>
         <div>
-            <strong>Entry Principle:</strong>
+            <strong>Pilih Saldo Normal:</strong>
             @if($category->entry == 'dr')
             {{ __('Debit') }}
             @elseif ($category->entry == 'cr')
-            {{ __('Credit') }}
+            {{ __('Kredit') }}
             @else
-            <span class="text-danger">{{ __('Contact for developer support immediately') }}</span>
+            <span class="text-danger">{{ __('Hubungi Developer Support segera') }}</span>
             @endif
         </div>
         <div>
-            <strong>Description:</strong> {{ $category->desc }}
+            <strong>Deskripsi:</strong> {{ $category->desc }}
         </div>
     </div>
     <div class="card-footer bg-white row ml-4">
-        <a href="{{ url('api/categories/edit',$category->id) }}" class="btn btn-primary">{{ __('Edit') }}</a>
+        <a href="{{ url('api/categories/edit',$category->id) }}" class="btn btn-primary">{{ __('Ubah') }}</a>
         @if ($category->is_deletable === 1)
         <form action="{{ url('api/categories/delete', $category->id) }}" method="POST">
             @csrf
-            @method('delete')
-            <input type="submit" value="Delete" class="btn btn-delete ml-2" />
+            @method('Hapus')
+            <input type="submit" value="Hapus" class="btn btn-delete ml-2" />
         </form>
         @endif
     </div>

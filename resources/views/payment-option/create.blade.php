@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="Create Payment Option" showCreate='false' link="" />
+<x-header title="Buat Metode Pembayaran" showCreate='false' link="" />
 <div class="d-lg-flex">
     <div class="col-lg-8">
         <div class="card border-0 mt-2 ml-2">
             <div class="card-body">
                 <form class="form" action="{{ url('api/payment-options/store') }}" autocomplete="off" method="POST">
                     @csrf
-                    <label for="title">Title</label>
+                    <label for="title">Judul</label>
                     <input type="text" name="title" id="title"
                         class="form-control rounded-0 @error('title') is-invalid @enderror" value="{{ old('title') }}"
                         autofocus />
@@ -18,7 +18,7 @@
                     </span>
                     @enderror
                     <div class="mt-2">
-                        <label for="desc">Description</label>
+                        <label for="desc">Deskripsi</label>
                         <input type="text" name="desc" id="desc"
                             class="form-control rounded-0 @error('desc') is-invalid @enderror"
                             value="{{ old('desc') }}" />
@@ -28,7 +28,7 @@
                         </span>
                         @enderror
                     </div>
-                    <input type="submit" class="btn btn-primary mt-2" value="Create" />
+                    <input type="submit" class="btn btn-primary mt-2" value="Buat" />
                 </form>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <div class="col-lg-4">
         <div class="card border-0 mt-2 ml-2">
             <div class="card-body">
-                <strong>Other Payment Options</strong>
+                <strong>Metode Pembayaran Lain</strong>
                 <ol class="p-2 show-gracefully" id="load-here"></ol>
             </div>
         </div>

@@ -18,8 +18,8 @@
 <div class="alert alert-warning rounded-0 alert-dismissible fade show ml-2" role="alert">
     <strong class="text-danger">{{ $message }}</strong>
     <ul>
-        <li>Are you trying to withdraw more amount than you posess?</li>
-        <li>Have you inspected and messed around with code or markup?</li>
+        <li>Apakah Anda mencoba untuk menarik jumlah lebih dari yang Anda miliki?</li>
+        <li>Sudahkah Anda memeriksa kode atau markup?</li>
     </ul>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="All Categories" showCreate="true" link="api/categories/create" />
+<x-header title="Semua Kategori" showCreate="true" link="api/categories/create" />
 @include('layouts.session')
 <table class="table table-index bg-white table-striped table-hover m-2">
     <thead>
         <tr>
-            <th>S.N.</th>
-            <th>Title</th>
-            <th>Option</th>
+            <th>No</th>
+            <th>Judul</th>
+            <th>Pilihan</th>
         </tr>
     </thead>
     <tbody>
@@ -36,7 +36,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="3" class="text-center">No Record found</td>
+            <td colspan="3" class="text-center">Tidak Ada Transaksi</td>
         </tr>
         @endforelse
     </tbody>

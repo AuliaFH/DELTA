@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="All Transactions" showCreate="true" link="api/transactions/create" />
+<x-header title="Semua Transaksi" showCreate="true" link="api/transactions/create" />
 @include('layouts.session')
 <table class="table table-index table-striped table-hover m-2">
     <thead>
         <tr>
-            <th>S.N.</th>
-            <th>Title</th>
-            <th>Budget</th>
-            <th>Payment Via</th>
-            <th>Category</th>
-            <th>Amount</th>
+            <th>No.</th>
+            <th>Judul</th>
+            <th>Anggaran</th>
+            <th>Metode Pembayaran</th>
+            <th>Kategori</th>
+            <th>Jumlah</th>
         </tr>
     </thead>
     <tbody>
@@ -26,7 +26,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="6" class="text-center">No record found</td>
+            <td colspan="6" class="text-center">Tidak Ada Transaksi</td>
         </tr>
         @endforelse
     </tbody>

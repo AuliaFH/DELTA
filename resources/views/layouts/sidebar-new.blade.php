@@ -7,102 +7,102 @@
                 <h4 class="m-0 text-6 font-weight-bold">{{ Auth::user()->name }}</h4>
                 <i class="fa fa-cirle text-success mr-3"></i>
                 <small class="font-weight-normal text-muted mb-0">
-                    Admin
+                    Pengguna
                 </small>
             </div>
         </div>
     </div>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 small mb-0">Dashboard</p>
+    <p class="text-gray font-weight-bold text-uppercase px-3 small mb-0">Halaman Utama</p>
 
     <ul class="nav flex-column bg-white mb-0">
         <li class="nav-item">
             <a href="{{ url('api/home') }}"
                 class="nav-link text-dark {{ request()->is('api/home') ? 'bg-light' : "" }}">
                 <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                Home
+                Beranda
             </a>
         </li>
         <li class="nav-item">
             <a href="{{ url('api/balances/index') }}"
                 class="nav-link text-dark {{ request()->is('api/balances/index') ? 'bg-light' : "" }}">
                 <i class="fa fa-gg-circle mr-3 text-primary fa-fw"></i>
-                Balances
+                Saldo
             </a>
         </li>
     </ul>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Budget</p>
+    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Anggaran</p>
     <ul class="nav flex-column bg-white mb-0">
         <li class="nav-item">
             <a href="{{ url('api/budgets/current') }}"
                 class="nav-link text-dark {{ request()->is('api/budgets/current') ? "bg-light" : "" }}">
                 <i class="fa fa-check mr-3 text-primary fa-fw"></i>
-                Active Budget
+                Anggaran Aktif
             </a>
         </li>
         <li class="nav-item">
             <a href="{{ url('api/budgets/create') }}"
                 class="nav-link text-dark {{ request()->is('api/budgets/create') ? "bg-light" : "" }}">
                 <i class="fa fa-plus-circle mr-3 text-primary fa-fw"></i>
-                Create a New One
+                Buat Anggaran Baru
             </a>
         </li>
         <li class="nav-item">
             <a href="{{ url('api/budgets/index') }}"
                 class="nav-link text-dark {{ request()->is('api/budgets/index') ? "bg-light" : "" }}">
                 <i class="fa fa-table mr-3 text-primary fa-fw"></i>
-                View All Budgets
+                Lihat Semua Anggaran
             </a>
         </li>
     </ul>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Category</p>
+    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Kategori</p>
     <ul class="nav flex-column bg-white mb-0">
         <li class="nav-item">
             <a href="{{ url('api/categories/create') }}"
                 class="nav-link text-dark {{ request()->is('api/categories/create') ? "bg-light" : "" }}">
                 <i class="fa fa-plus-circle mr-3 text-primary fa-fw"></i>
-                Create a New One
+                Buat Kategori Baru
             </a>
         </li>
         <li class="nav-item">
             <a href="{{ url('api/categories/index') }}"
                 class="nav-link text-dark {{ request()->is('api/categories/index') ? "bg-light" : "" }}">
                 <i class="fa fa-table mr-3 text-primary fa-fw"></i>
-                View All Categories
+                Lihat Semua Kategori
             </a>
         </li>
     </ul>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Payment Options</p>
+    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Pilihan Pembayaran</p>
     <ul class="nav flex-column bg-white mb-0">
         <li class="nav-item">
             <a href="{{ url('api/payment-options/create') }}" class="nav-link text-dark">
                 <i class="fa fa-plus-circle mr-3 text-primary fa-fw"></i>
-                Create a New One
+                Buat Metode Pembayaran
             </a>
         </li>
         <li class="nav-item">
             <a href="{{ url('api/payment-options/index') }}" class="nav-link text-dark">
                 <i class="fa fa-table mr-3 text-primary fa-fw"></i>
-                View Payment Options
+                Lihat Metode Pembayaran
             </a>
         </li>
     </ul>
 
-    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Transactions</p>
+    <p class="text-gray font-weight-bold text-uppercase px-3 pt-2 small mb-0">Transaksi</p>
     <ul class="nav flex-column bg-white mb-0">
         <li class="nav-item">
             <a href="{{ url('api/transactions/create') }}" class="nav-link text-dark">
                 <i class="fa fa-plus-circle mr-3 text-primary fa-fw"></i>
-                Create a New One
+                Buat Transaksi Baru
             </a>
         </li>
         <li class="nav-item">
             <a href="{{ url('api/transactions/index') }}" class="nav-link text-dark">
                 <i class="fa fa-table mr-3 text-primary fa-fw"></i>
-                View Transactions
+                Lihat Transaksi
             </a>
         </li>
     </ul>
@@ -112,7 +112,7 @@
                 <small>Designed &amp; Developed by iBishek</small>
             </div>
             <div class="text-center">
-                Free to Use
+                
             </div>
         </div>
     </footer>

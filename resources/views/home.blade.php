@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="Dashboard" showCreate="false" link="" />
+<x-header title="Halaman Utama" showCreate="false" link="" />
 <div class="row m-2">
     <div class="col-md-12 mb-2">
-        <small class="float-right" id="budget-title">Current Budget <code>i.e.</code></small>
+        <small class="float-right" id="budget-title">Anggaran Saat Ini <code>i.e.</code></small>
     </div>
     <div class="col-md-3">
         <div class="card dashboard card-border-bottom rounded-sm bg-white mb-3">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <i class="fa fa-long-arrow-up text-success"></i>
-                Total Income
+                Total Pendapatan
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <i class="fa fa-long-arrow-down text-danger"></i>
-                Total Expense
+                Total Pengeluaran
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <i class="fa fa-bank text-primary"></i>
-                Total Balance
+                Total Saldo
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <i class="fa fa-money text-secondary"></i>
-                Cash on Hand
+                Kas Ditangan
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
         <div class="card">
             <div class="card-header bg-white">
                 <i class="fa fa-adjust text-primary mr-2"></i>
-                <strong>Current Balances</strong>
+                <strong>Saldo Saat Ini</strong>
             </div>
             <div class="card-body">
                 <canvas id="current-balances"></canvas>
@@ -76,7 +76,7 @@
         <div class="card">
             <div class="card-header bg-white">
                 <i class="fa fa-usd text-success mr-2"></i>
-                <strong>% of Budgets Income</strong>
+                <strong>% Anggaran Pendapatan</strong>
             </div>
             <div class="card-body">
                 <canvas id="percent-of-income"></canvas>
@@ -87,7 +87,7 @@
         <div class="card">
             <div class="card-header bg-white">
                 <i class="fa fa-usd text-danger mr-2"></i>
-                <strong>% of Budgets Expense</strong>
+                <strong>% Anggaran Pengeluaran</strong>
             </div>
             <div class="card-body">
                 <canvas id="percent-of-expense"></canvas>
@@ -101,7 +101,7 @@
         <div class="card border-0">
             <div class="card-header bg-white">
                 <i class="fa fa-chevron-circle-left text-primary mr-2"></i>
-                <strong>Previous Budgets</strong>
+                <strong>Anggaran Sebelumnya</strong>
             </div>
             <div class="card-body p-0">
                 <canvas id="previus-budgets"></canvas>
@@ -118,15 +118,15 @@
         <div class="card">
             <div class="card-header bg-white">
                 <i class="fa fa-table text-success mr-2"></i>
-                <strong>Latest Income Transactions</strong>
+                <strong>Transaksi Pendapatan Terakhir</strong>
             </div>
             <div class="card-body p-0">
                 <table id="income" class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>S.N.</th>
-                            <th>Title</th>
-                            <th>Amount</th>
+                            <th>No.</th>
+                            <th>Judul</th>
+                            <th>Jumlah</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -139,15 +139,15 @@
         <div class="card">
             <div class="card-header bg-white">
                 <i class="fa fa-table text-danger mr-2"></i>
-                <strong>Latest Expense Transactions</strong>
+                <strong>Transaksi Pengeluaran Terakhir</strong>
             </div>
             <div class="card-body p-0">
                 <table id="expense" class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>S.N.</th>
-                            <th>Title</th>
-                            <th>Amount</th>
+                            <th>No.</th>
+                            <th>Judul</th>
+                            <th>Jumlah</th>
                         </tr>
                     </thead>
                     <tbody>

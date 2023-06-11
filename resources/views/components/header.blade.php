@@ -4,12 +4,12 @@
         <h2 class="card-title col-md-8">{{ $title }}</h2>
         <a href="{{ url()->previous() }}" class="btn btn-quick-back shadow-sm h-100">
             <i class="fa fa-angle-left"> </i>
-            {{ __(' Back') }}
+            {{ __(' Kembali') }}
         </a>
         {{-- refined in component controller i.e. App\View\Components\Header.php --}}
         @if($showCreate)
         <a href="{{ url($link) }}" class="btn btn-add-new shadow-sm h-100 ml-2">
-            {{ __('Add New ') }} <i class="fa fa-plus"> </i>
+            {{ __('Tambah Baru') }} <i class="fa fa-plus"> </i>
         </a>
         @endif
     </div>

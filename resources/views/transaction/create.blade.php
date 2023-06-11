@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="Create Transaction" showCreate="false" link="" />
+<x-header title="Buat Transaksi" showCreate="false" link="" />
 @include('layouts.session')
 <div class="card border-0 mt-2 ml-2">
     <div class="card-body">
         <form action="{{ url('api/transactions/store') }}" method="POST" autocomplete="on" class="form">
             @csrf
-            <label for="title">Title</label>
+            <label for="title">Judul</label>
             <input type="text" name="title" class="form-control rounded-0 @error('title') is-invalid @enderror"
                 value="{{ old('title') }}" />
             @error('title')
@@ -16,7 +16,7 @@
             </span>
             @enderror
             <div class="mt-2">
-                <label for="desc">Description</label>
+                <label for="desc">Deskripsi</label>
                 <input type="text" name="desc" class="form-control rounded-0 @error('desc') is-invalid @enderror"
                     value="{{ old('desc') }}" />
                 @error('desc')
@@ -28,11 +28,11 @@
             <div class="row mt-2">
                 <div class="col-lg-6">
                     <select name="mode" id="mode" class="form-control rounded-0 @error('mode') is-invalid @enderror">
-                        <option selected disabled>Pay Via</option>
+                        <option selected disabled>Metode Pembayaran</option>
                         @forelse ($modes as $mode)
                         <option value="{{ $mode->id }}">{{ $mode->title }}</option>
                         @empty
-                        <option>No record found</option>
+                        <option>Tidak Ada Transaksi</option>
                         @endforelse
                     </select>
                     @error('mode')
@@ -44,11 +44,11 @@
                 <div class="col-lg-6 lg-mt-2">
                     <select name="category" id="category"
                         class="form-control rounded-0 @error('category') is-invalid @enderror">
-                        <option selected disabled>Transaction category</option>
+                        <option selected disabled>Kategori Transaksi</option>
                         @forelse ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->title }}</option>
                         @empty
-                        <option>No record found</option>
+                        <option>Tidak Ada Transaksi</option>
                         @endforelse
                     </select>
                     @error('category')
@@ -65,7 +65,7 @@
                 <div class="col-lg-6"></div>
             </div>
             <div class="mt-2">
-                <label for="amount">Amount</label>
+                <label for="amount">Jumlah</label>
                 <input type="text" name="amount" class="form-control rounded-0 @error('amount') is-invalid @enderror"
                     value="{{ old('amount') }}" data-mask="#,##0.00" data-mask-reverse="true" />
                 @error('amount')

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<x-header title="All Payment options" showCreate="true" link="api/payment-options/create" />
+<x-header title="Semua Metode Pembayaran" showCreate="true" link="api/payment-options/create" />
 @include('layouts.session')
 <table class="table table-index table-striped table-hover m-2">
     <thead>
         <tr>
-            <th>S.N.</th>
-            <th>Title</th>
-            <th>Option</th>
+            <th>No.</th>
+            <th>Judul</th>
+            <th>Metode</th>
         </tr>
     </thead>
     <tbody>
@@ -36,7 +36,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="3" class="text-center">No Record Found</td>
+            <td colspan="3" class="text-center">Tidak Ada Transaksi</td>
         </tr>
         @endforelse
     </tbody>
